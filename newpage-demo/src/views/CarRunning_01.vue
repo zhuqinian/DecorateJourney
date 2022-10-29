@@ -1,8 +1,12 @@
 <!--html-->
 <template>
   <div class="CarRunning">
+    <div class="banner-txt">
+      <h1>Faculty of Artificial Intelligence</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laboriosam quas non at similique molestiae dolorum natus.</p>
+      <button class="button-main" @click="gotoSection">一键定制</button>
+    </div>
     <div class="body">
-
     </div>
   </div>
 </template>
@@ -17,6 +21,42 @@
 /*.CarRunning {*/
 
 /*}*/
+.banner-txt{
+  top: 200px;
+  margin-left: 10%;
+  width: 500px;
+  float: left;
+}
+.banner-txt h1{
+  font-size: 50px;
+  font-weight: bold;
+  color: gold;
+}
+.banner-txt p{
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+}
+.button-main{
+  width: 150px;
+  padding: 10px 0;
+  margin: 60px 10px;
+  border-radius: 25px;
+  border: 0;
+  background: gold;
+  color: #262626;
+  text-align: center;
+  font-family: PingFang_font;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: .5s;
+}
+.button-main:hover{
+  background: #00FFFF;
+  transition: 0.5s;
+
+}
 .CarRunning{
   box-sizing: border-box;
 
@@ -30,7 +70,7 @@
   --d-gray : #282724 ;
   --d-blue: #202428 ;
   --orange : #ef6206 ;
-  --yellow : #dfa500 ;
+  --yellow : #00FFFF ;
   --l-yellow: #deb953;
   --light: #fbfbfb ;
   --n-road : -4em;
