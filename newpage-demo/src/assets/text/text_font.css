@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "mytestfont";
+    src: url('./font_package/汉仪旗黑-105简繁.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PingFang_font";
+    src: url('./font_package/苹方/苹方黑体-中粗-简.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

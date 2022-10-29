@@ -1,0 +1,37 @@
+{
+  "id": "3689765",
+  "name": "add_botton",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "29178771",
+      "name": "PlusCircleFilled",
+      "font_class": "PlusCircleFilled",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "32159060",
+      "name": "PlusCircleFilled-copy",
+      "font_class": "PlusCircleFilled-copy",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "32159061",
+      "name": "PlusCircleFilled-copy-copy",
+      "font_class": "PlusCircleFilled-copy-copy",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "32159062",
+      "name": "PlusCircleFilled-copy-copy-copy",
+      "font_class": "PlusCircleFilled-copy-copy-copy",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    }
+  ]
+}
