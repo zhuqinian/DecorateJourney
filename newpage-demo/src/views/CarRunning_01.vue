@@ -50,7 +50,7 @@
   font-size: 20px;
   cursor: pointer;
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
 }
 .button-main:hover{
   background: #00FFFF;
@@ -75,6 +75,7 @@
   --light: #fbfbfb ;
   --n-road : -4em;
   --p-road : 7em;
+  --gold: #FFD700FF;
 
   background-color: var(--green) ;
 
