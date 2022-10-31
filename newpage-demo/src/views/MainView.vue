@@ -4,7 +4,12 @@
     <div class="banner-txt">
       <h1>"装点旅途"</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laboriosam quas non at similique molestiae dolorum natus.</p>
-      <button class="button-main" @click="gotoSection">一键定制</button>
+    </div>
+    <div class="jump_map">
+      <button class="button-main" @click="gotoSection('PartOne-1')">"桩"点旅途</button>
+      <button class="button-main" @click="gotoSection('PartTwo')">装“电”旅途</button>
+      <button class="button-main" @click="gotoSection('PartThree')">装点“绿”途</button>
+      <button class="button-main" @click="gotoSection('partnerSection')">总结</button>
     </div>
     <div class="moveview">
       <img class="car_red"   src="../assets/images/newAssets/car_red.png">
@@ -53,8 +58,12 @@
 </template>
 
 <!--JavaScript-->
-<script>
-
+<script setup>
+import { defineEmits } from "vue"
+const emit = defineEmits(["SectionJump"]);
+function gotoSection(section){
+  emit("SectionJump",section);
+}
 </script>
 
 <!--css-->
@@ -78,6 +87,9 @@
   font-size: 18px;
   font-weight: normal;
   color: black;
+}
+.jump_map{
+  position: absolute;
 }
 .button-main{
   width: 150px;

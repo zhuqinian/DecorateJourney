@@ -1,6 +1,6 @@
 <template>
-  <el-affix :offset="0">
-    <el-menu :default-active="activeIndex" class="nav" mode="horizontal" @select="handleSelect" :ellipsis="false">
+  <el-affix :offset="0" >
+    <el-menu :default-active="activeIndex" class="nav" mode="horizontal" @select="handleSelect" :ellipsis="false" >
       <el-menu-item index="mainSection">
         <img class="logo_img" src="../assets/images/newAssets/LOGO.png" alt="">
       </el-menu-item>
@@ -15,20 +15,21 @@
   <div class="content-wrapper">
     <section id="mainSection">
       <div class="inner-width mainSectionBg">
-        <MainView></MainView>
+        <MainView @SectionJump="gotoSection"></MainView>
       </div>
     </section>
 
-    <section id="PartOne">
+    <section id="PartOne-1">
       <div class="inner-width PartOneSectionBg">
         <CarRunning></CarRunning>
       </div>
     </section>
-    <section id="PartOne-1">
+    <section id="PartOne-2">
       <div class="inner-width PartOneSectionBg">
+        <Partone_02></Partone_02>
       </div>
     </section>
-    <section id="PartOne-2">
+    <section id="PartOne-3">
       <div class="inner-width PartOneSectionBg">
       </div>
     </section>
@@ -54,10 +55,10 @@
 <script setup lang="ts">
 import { ref, nextTick } from "vue";
 import FooterView from "@/views/FooterView.vue";
-import MainView from "@/views/MainView.vue"
-import CarRunning from "@/views/CarRunning_01.vue"
-import CarRunning02 from "@/views/CarRunning_02.vue"
-// import Dinosuar from "@/views/Dinosuar.vue"
+import MainView from "@/views/MainView.vue";
+import CarRunning from "@/views/CarRunning_01.vue";
+import Partone_02 from "@/views/Partone_02.vue";
+import CarRunning02 from "@/views/CarRunning_02.vue";
 
 
 const activeIndex = ref("");
@@ -68,6 +69,10 @@ const handleSelect = async (key: string, keyPath: string[]) => {
   window.scrollTo({ "behavior": "smooth", "top": el && el.offsetTop || 0 })
 
 }
+const gotoSection = (SectionID: any) => {
+  handleSelect(SectionID,"")
+}
+
 </script>
 
 <style scoped>
