@@ -6,22 +6,49 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laboriosam quas non at similique molestiae dolorum natus.</p>
       <button class="button-main" @click="gotoSection">一键定制</button>
     </div>
-    <p class="moveview">
+    <div class="moveview">
       <img class="car_red"   src="../assets/images/newAssets/car_red.png">
-      <img class="car_PL"   src="../assets/images/newAssets/car_PL.png">
+<!--      <img class="car_PL"   src="../assets/images/newAssets/car_PL.png">-->
       <img class="buildings01"   src="../assets/images/newAssets/building_01.png">
       <img class="buildings02"   src="../assets/images/newAssets/building_02.png">
       <img class="buildings03"   src="../assets/images/newAssets/building_high.png">
-      <img class="tree01"   src="../assets/images/newAssets/tree01.png">
-      <img class="tree02-1"   src="../assets/images/newAssets/tree02.png">
-      <img class="tree02-2"   src="../assets/images/newAssets/tree02.png">
-      <img class="tree02-3"   src="../assets/images/newAssets/tree02.png">
-      <img class="tree02-4"   src="../assets/images/newAssets/tree02.png">
-<!--      &lt;!&ndash;      <img class="tree01"   src="../assets/images/newAssets/tree01.png">&ndash;&gt;-->
-<!--      <img class="tree01"   src="../assets/images/newAssets/tree01.png">-->
+      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
+      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
+      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">
+      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">
+      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
+      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
+      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">
+      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">
 
-    </p>
+
+      <img class="tree02"   src="../assets/images/newAssets/Ytree02.png">
+      <img class="tree02"   src="../assets/images/newAssets/Ytree02.png">
+      <img class="tree02"   src="../assets/images/newAssets/Ytree02.png">
+      <img class="tree02"   src="../assets/images/newAssets/Ytree02.png">
+      <img class="tree02"   src="../assets/images/newAssets/Ytree02.png">
+      <img class="tree02"   src="../assets/images/newAssets/Ytree02.png">
+
+
+      <img class="cao"   src="../assets/images/newAssets/cao01.png">
+      <img class="cao"   src="../assets/images/newAssets/cao01.png">
+      <img class="cao"   src="../assets/images/newAssets/cao01.png">
+      <img class="cao"   src="../assets/images/newAssets/cao01.png">
+      <img class="cao"   src="../assets/images/newAssets/cao01.png">
+      <img class="cao"   src="../assets/images/newAssets/cao01.png">
+      <img class="cao"   src="../assets/images/newAssets/cao01.png">
+      <img class="cao"   src="../assets/images/newAssets/cao01.png">
+      <img class="cao"   src="../assets/images/newAssets/cao01.png">
+      <img class="cao"   src="../assets/images/newAssets/cao01.png">
+      <img class="cao"   src="../assets/images/newAssets/cao01.png">
+      <img class="cao"   src="../assets/images/newAssets/cao01.png">
+
+
+      <!--      &lt;!&ndash;      <img class="tree01"   src="../assets/images/newAssets/tree01.png">&ndash;&gt;-->
+<!--      <img class="tree01"   src="../assets/images/newAssets/tree01.png">-->
+    </div>
     <p class="road-object"></p>
+
   </div>
 </template>
 
@@ -73,16 +100,21 @@
 
 }
 .moveview{
+  width: 100%;
+  height: 300px;
+  top: 100%;
+  position: absolute;
   text-align: center;
 }
 .car_red{
   position: absolute;
-  top:700px;
+  bottom: 300px;
+  left: 47%;
   width: 150px;
   height: 100px;
   margin: 0;
   padding: 0;
-  transform:scaleX(-1);
+  /*transform:scaleX(-1);*/
   z-index: 1;
 
 
@@ -90,13 +122,14 @@
 
 }
 .car_PL{
-  left: 300px;
-  top:700px;
+  position: absolute;
+  bottom: 300px;
+  right: 300px;
   width: 150px;
   height: 100px;
   margin: 0;
   padding: 0;
-  transform:scaleX(-1);
+  /*transform:scaleX(-1);*/
   z-index: 1;
 
   animation: shake  0.3s  infinite alternate;
@@ -104,68 +137,79 @@
 }
 .buildings01{
   position: absolute;
+  bottom: 300px;
   left: -250px;
-  top:610px;
   width: 250px;
   height: 200px;
   margin: 0;
   padding: 0;
   transform:scaleX(-1);
   z-index: 0;
-  animation: roadmove  4s linear infinite ;
+  animation: roadmove  8s linear infinite ;
   animation-delay: 0.34s
 
 
 }
 .buildings02{
   position: absolute;
+  bottom: 300px;
   left: -250px;
-  top:515px;
   width: 250px;
   height: 300px;
   margin: 0;
   padding: 0;
   transform:scaleX(-1);
   z-index: 0;
-  animation: roadmove  4s linear infinite ;
+  animation: roadmove  8s linear infinite ;
   animation-delay: 1.76s
 
 
 }
 .buildings03{
   position: absolute;
+  bottom: 290px;
   left: -250px;
-  top:422px;
   width: 250px;
   height: 400px;
   margin: 0;
   padding: 0;
   transform:scaleX(-1);
   z-index: 0;
-  animation: roadmove  4s linear infinite ;
+  animation: roadmove  8s linear infinite ;
   animation-delay: 2.3s
 
 
 }
 .tree01{
-  position: absolute;
-  left: 300px;
-  top:645px;
-  width: 150px;
-  height: 160px;
+  bottom: 120px;
+  right: 1000px;
+  width: 80px;
+  height: 120px;
   margin: 0;
   padding: 0;
   transform:scaleX(-1);
   z-index: 1;
-  animation: roadmove  3s linear infinite ;
-  animation-delay: 0.89s
-
+  animation: roadmove  6s linear infinite ;
+  animation-delay: 3.23s
 
 }
-.tree02-1{
-  position: absolute;
-  left: 150px;
-  top:682px;
+.tree11{
+  bottom: 120px;
+  right: 1000px;
+  width: 80px;
+  height: 120px;
+  margin: 0;
+  padding: 0;
+  transform:scaleX(-1);
+  z-index: 0;
+  animation: roadmove  6s linear infinite ;
+  animation-delay: 3.24s;
+  filter: brightness(0.7);
+
+}
+.tree02{
+  bottom: 120px;
+  right: 1000px;
   width: 80px;
   height: 120px;
   margin: 0;
@@ -173,54 +217,27 @@
   transform:scaleX(-1);
   z-index: 1;
 
-  animation: roadmove  3s linear infinite ;
+  animation: roadmove  6s linear infinite ;
 
 }
-.tree02-2{
-  position: absolute;
-  left: 80px;
-  top:682px;
-  width: 80px;
-  height: 120px;
+.cao{
+  bottom: 120px;
+  right: 1400px;
+  width: 40px;
+  height: 60px;
   margin: 0;
   padding: 0;
-  transform:scaleX(-1);
   z-index: 1;
 
-  animation: roadmove  3s linear infinite ;
-}
-.tree02-3{
-  position: absolute;
-  left: 10px;
-  top:682px;
-  width: 80px;
-  height: 120px;
-  margin: 0;
-  padding: 0;
-  transform:scaleX(-1);
-  z-index: 1;
+  animation: roadmove  6s linear infinite ;
+  animation-delay: 2.23s
 
-  animation: roadmove  3s linear infinite ;
-}
-.tree02-4{
-  position: absolute;
-  left: -60px;
-  top:682px;
-  width: 80px;
-  height: 120px;
-  margin: 0;
-  padding: 0;
-  transform:scaleX(-1);
-  z-index: 1;
 
-  animation: roadmove  3s linear infinite ;
 }
-
 .road-object{
   position: absolute;
   width: 100%;
-  top:790px;
-
+  top: 98%;
 }
 
 @keyframes shake {
@@ -238,14 +255,14 @@
 
 @keyframes roadmove {
   0% {
-    transform: translate(-500px, 0px);/*开始位置*/
+    transform: translate(3000px, 0px);/*开始位置*/
   }
   50% {
-    transform: translate(2500px, 0px); /* 可配置跳动方向 */
+    transform: translate(-500px, 0px); /* 可配置跳动方向 */
 
   }
   100% {
-    transform: translate(2500px, 0px);/*结束位置*/
+    transform: translate(-500px, 0px);/*结束位置*/
   }
 
 }

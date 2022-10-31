@@ -2,7 +2,7 @@
 <template>
   <div class="CarRunning">
     <div class="banner-txt">
-      <h1>Faculty of Artificial Intelligence</h1>
+      <h1>"桩"点旅途</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laboriosam quas non at similique molestiae dolorum natus.</p>
       <button class="button-main" @click="gotoSection">一键定制</button>
     </div>

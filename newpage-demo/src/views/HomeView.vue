@@ -6,33 +6,40 @@
       </el-menu-item>
       <div class="flex-grow" />
       <el-menu-item index="mainSection">首页</el-menu-item>
-      <el-menu-item index="functionSection">介绍</el-menu-item>
-      <el-menu-item index="diySection">数据展示01</el-menu-item>
-      <el-menu-item index="demoSection">数据展示02</el-menu-item>
-      <el-menu-item index="partnerSection">数据展示03</el-menu-item>
+      <el-menu-item index="PartOne">"桩"点旅途</el-menu-item>
+      <el-menu-item index="PartTwo">装“电”旅途</el-menu-item>
+      <el-menu-item index="PartThree">装点“绿”途</el-menu-item>
+      <el-menu-item index="partnerSection">总结</el-menu-item>
     </el-menu>
   </el-affix>
   <div class="content-wrapper">
     <section id="mainSection">
       <div class="inner-width mainSectionBg">
-        <CarRunning></CarRunning>
-      </div>
-    </section>
-
-    <section id="functionSection">
-      <div class="inner-width functionSectionBg">
         <MainView></MainView>
       </div>
     </section>
 
-    <section id="diySection">
-      <div class="inner-width diySectionBg">
+    <section id="PartOne">
+      <div class="inner-width PartOneSectionBg">
+        <CarRunning></CarRunning>
+      </div>
+    </section>
+    <section id="PartOne-1">
+      <div class="inner-width PartOneSectionBg">
+      </div>
+    </section>
+    <section id="PartOne-2">
+      <div class="inner-width PartOneSectionBg">
+      </div>
+    </section>
+    <section id="PartTwo">
+      <div class="inner-width PartTwoSectionBg">
         <CarRunning02></CarRunning02>
       </div>
     </section>
 
-    <section id="demoSection">
-      <div class="inner-width demoSectionBg">
+    <section id="PartThree">
+      <div class="inner-width PartThreeSectionBg">
       </div>
     </section>
 
@@ -102,9 +109,9 @@ section {
 }
 
 .mainSectionBg,
-.functionSectionBg,
-.diySectionBg,
-.demoSectionBg,
+.PartOneSectionBg,
+.PartTwoSectionBg,
+.PartThreeSectionBg,
 .partnerSectionBg {
   background-image: url("../assets/images/newAssets/banner-bg.jpg");
   background-size: cover;
