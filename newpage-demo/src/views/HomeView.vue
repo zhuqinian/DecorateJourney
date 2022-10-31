@@ -31,6 +31,7 @@
     </section>
     <section id="PartOne-3">
       <div class="inner-width PartOneSectionBg">
+        <Partone_03></Partone_03>
       </div>
     </section>
     <section id="PartTwo">
@@ -57,7 +58,9 @@ import { ref, nextTick } from "vue";
 import FooterView from "@/views/FooterView.vue";
 import MainView from "@/views/MainView.vue";
 import CarRunning from "@/views/CarRunning_01.vue";
-import Partone_02 from "@/views/Partone_02.vue";
+import Partone_02 from "@/views/Partone_02.vue"
+import Partone_03 from "@/views/Partone_03.vue";
+
 import CarRunning02 from "@/views/CarRunning_02.vue";
 
 

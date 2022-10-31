@@ -63,6 +63,9 @@
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat.
           </p>
+          <div class="PLTOne">
+            <div id="chart01" style="height: 100%; width: 100%; top: 20px;"></div>
+          </div>
           <div class="social">
             <i class="fa fa-facebook"></i>
             <i class="fa fa-twitter"></i>
@@ -79,6 +82,9 @@
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat.
           </p>
+          <div class="PLTTwo">
+            <div id="chart02" style="height: 100%; width: 100%; top: 20px;"></div>
+          </div>
           <div class="social">
             <i class="fa fa-facebook"></i>
             <i class="fa fa-twitter"></i>
@@ -139,7 +145,15 @@
 
 <!--JavaScript-->
 <script>
+import * as echarts from 'echarts';
+
   $(document).ready(function() {
+    var chartDom01 = document.getElementById('chart01');
+
+    var myChart = echarts.init(chartDom01);
+    var option_chart01;
+
+
     var oldId = null;
 
     $('.tabs-controls-link').click(function(e) {
@@ -174,7 +188,158 @@
 
       oldId = currentId;
     });
+
+    option_chart01 = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'cross',
+          crossStyle: {
+            color: '#999'
+          }
+        }
+      },
+      toolbox: {
+        feature: {
+          dataView: { show: true, readOnly: false },
+          magicType: { show: true, type: ['line', 'bar'] },
+          restore: { show: true },
+          saveAsImage: { show: true }
+        }
+      },
+      legend: {
+        data: ['Evaporation', 'Precipitation', 'Temperature']
+      },
+      xAxis: [
+        {
+          type: 'category',
+          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          axisPointer: {
+            type: 'shadow'
+          }
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          name: 'Precipitation',
+          min: 0,
+          max: 250,
+          interval: 50,
+          axisLabel: {
+            formatter: '{value} ml'
+          }
+        },
+        {
+          type: 'value',
+          name: 'Temperature',
+          min: 0,
+          max: 25,
+          interval: 5,
+          axisLabel: {
+            formatter: '{value} °C'
+          }
+        }
+      ],
+      series: [
+        {
+          name: 'Evaporation',
+          type: 'bar',
+          tooltip: {
+            valueFormatter: function (value) {
+              return value + ' ml';
+            }
+          },
+          data: [
+            2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3
+          ]
+        },
+        {
+          name: 'Precipitation',
+          type: 'bar',
+          tooltip: {
+            valueFormatter: function (value) {
+              return value + ' ml';
+            }
+          },
+          data: [
+            2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3
+          ]
+        },
+        {
+          name: 'Temperature',
+          type: 'line',
+          yAxisIndex: 1,
+          tooltip: {
+            valueFormatter: function (value) {
+              return value + ' °C';
+            }
+          },
+          data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+        }
+      ]
+    };
+
+    option_chart01 && myChart.setOption(option_chart01);
+
   });
+$(document).ready(function() {
+  var chartDom02 = document.getElementById('chart02');
+
+  var myChart = echarts.init(chartDom02);
+  var option_chart02;
+
+
+
+
+
+  option_chart02 = {
+    tooltip: {
+      trigger: 'item'
+    },
+    legend: {
+      top: '5%',
+      left: 'center'
+    },
+    series: [
+      {
+        name: 'Access From',
+        type: 'pie',
+        radius: ['40%', '70%'],
+        avoidLabelOverlap: false,
+        itemStyle: {
+          borderRadius: 10,
+          borderColor: '#fff',
+          borderWidth: 2
+        },
+        label: {
+          show: false,
+          position: 'center'
+        },
+        emphasis: {
+          label: {
+            show: true,
+            fontSize: '40',
+            fontWeight: 'bold'
+          }
+        },
+        labelLine: {
+          show: false
+        },
+        data: [
+          { value: 1048, name: 'Search Engine' },
+          { value: 735, name: 'Direct' },
+          { value: 580, name: 'Email' },
+          { value: 484, name: 'Union Ads' },
+          { value: 300, name: 'Video Ads' }
+        ]
+      }
+    ]
+  };
+
+  option_chart02 && myChart.setOption(option_chart02);
+
+});
 
 </script>
 
@@ -206,6 +371,26 @@ h1 {
   overflow: hidden;
   margin-left: -25px;
   margin-top: 45px;
+}
+.PLTOne{
+  width: 500px;
+  height: 400px;
+  border-radius: 28px;
+  /*border: 1px solid #262626;*/
+  float: right;
+  background: white;
+  box-shadow: 8px 4px 20px black;
+
+}
+.PLTTwo{
+  width: 500px;
+  height: 400px;
+  border-radius: 28px;
+  /*border: 1px solid #262626;*/
+  float: right;
+  background: white;
+  box-shadow: 8px 4px 20px black;
+
 }
 .tabs-controls {
   position: relative;
