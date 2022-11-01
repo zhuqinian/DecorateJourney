@@ -5,9 +5,11 @@
       <div class="header">
         <h1>新能源汽车充电桩现状 </h1>
       </div>
+      <div class="MapBox">
       <div class="Aside"></div>
       <div class="Main">
         <div id="mainMap" style="height: 100%; width: 100%;"></div>
+      </div>
       </div>
     </div>
   </div>
@@ -277,36 +279,55 @@ $(document).ready(function(){
 
 }
 .header h1{
-  top: 20px;
+  top: 5vh;
   font-size: 50px;
   font-weight: bold;
   font-family: PingFang_font;
   margin: 10px;
 }
 .Aside{
-  position: absolute;
-  width: 500px;
-  height: 600px;
+  /* position: absolute; */
+  width: 30vw ;
+  height: 70%;
   border-radius: 30px;
   border: 1px solid #262626;
-  margin: 80px 0 30px 0;
-  left: 150px;
+  /* margin: 80px 0 30px 0; */
+  /* left: 150px; */
   background: #00c380;
   z-index: 1;
-
-
+  -webkit-flex: 1;
+  flex: 1;
+  margin-inline: 30px;
+  margin-top:15vh;
+  left: 6vw;
 }
 .Main{
-  position: absolute;
-  width: 1000px;
-  height: 600px;
+  /* position: absolute; */
+  width: 60%;
+  height: 70%;
   border-radius: 30px;
   /*border: 1px solid #262626;*/
-  margin: 80px 0 30px 0;
-  right: 150px;
+  /* margin: 80px 0 30px 0; */
+  margin-top:15vh;
+  /* right: 150px; */
   background: #00FFFF;
   z-index: 0;
   overflow: hidden;
   box-shadow: 8px 4px 20px black;
+  -webkit-flex: 2;
+  flex: 2;
+  margin-inline: 30px;
+  left: 6vw;
+}
+.MapBox{
+  display:flex;
+  display: -webkit-flex;
+  width: 90vw;
+  height: 90vh;
+  justify-content: center;
+  /* width: 45%;
+  -webkit-flex: 1;
+  flex: 1;
+  margin-inline: 10px; */
 }
 </style>

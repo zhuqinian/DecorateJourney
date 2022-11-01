@@ -6,7 +6,7 @@
       </el-menu-item>
       <div class="flex-grow" />
       <el-menu-item index="mainSection">首页</el-menu-item>
-      <el-menu-item index="PartOne">"桩"点旅途</el-menu-item>
+      <el-menu-item index="PartOne-1">"桩"点旅途</el-menu-item>
       <el-menu-item index="PartTwo">装“电”旅途</el-menu-item>
       <el-menu-item index="PartThree">装点“绿”途</el-menu-item>
       <el-menu-item index="partnerSection">总结</el-menu-item>
@@ -18,10 +18,10 @@
         <MainView @SectionJump="gotoSection"></MainView>
       </div>
     </section>
-
     <section id="PartOne-1">
       <div class="inner-width PartOneSectionBg">
-        <CarRunning></CarRunning>
+        <!-- <CarRunning></CarRunning> -->
+        <Partone_01></Partone_01>
       </div>
     </section>
     <section id="PartOne-2">
@@ -51,17 +51,18 @@
     </section>
     <FooterView></FooterView>
   </div>
+  
 </template>
 
 <script setup lang="ts">
 import { ref, nextTick } from "vue";
 import FooterView from "@/views/FooterView.vue";
-import MainView from "@/views/MainView.vue";
-import CarRunning from "@/views/CarRunning_01.vue";
+import MainView from "@/views/MainView.vue"
+import CarRunning from "@/views/CarRunning_01.vue"
+import CarRunning02 from "@/views/CarRunning_02.vue"
+// import Dinosuar from "@/views/Dinosuar.vue"
 import Partone_02 from "@/views/Partone_02.vue"
 import Partone_03 from "@/views/Partone_03.vue";
-
-import CarRunning02 from "@/views/CarRunning_02.vue";
 
 
 const activeIndex = ref("");

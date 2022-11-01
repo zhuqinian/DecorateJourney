@@ -39,6 +39,7 @@
       </section>
       <section class="cards-container">
         <div class="card card-current" id="1">
+          <div class="PLTIntroduce">
           <h1>新能源车市场现状</h1>
           <br>
           <p>
@@ -47,6 +48,7 @@
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat.
           </p>
+          </div>
           <div class="social">
             <i class="fa fa-facebook"></i>
             <i class="fa fa-twitter"></i>
@@ -55,14 +57,16 @@
           </div>
         </div>
         <div class="card" id="2">
-          <h1>市场规模</h1>
-          <br>
-          <p>
-            Elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
-          </p>
+          <div class="PLTIntroduce">
+            <h1>市场规模</h1>
+            <br>
+            <p>
+              Elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </p>
+          </div>
           <div class="PLTOne">
             <div id="chart01" style="height: 100%; width: 100%; top: 20px;"></div>
           </div>
@@ -74,6 +78,7 @@
           </div>
         </div>
         <div class="card" id="3">
+          <div class="PLTIntroduce">
           <h1>市场格局</h1>
           <br>
           <p>
@@ -82,6 +87,7 @@
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat.
           </p>
+          </div>
           <div class="PLTTwo">
             <div id="chart02" style="height: 100%; width: 100%; top: 20px;"></div>
           </div>
@@ -93,6 +99,7 @@
           </div>
         </div>
         <div class="card" id="4">
+          <div class="PLTIntroduce">
           <h1>用户画像</h1>
           <br>
           <p>
@@ -100,6 +107,7 @@
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrcaecat cupidatat nonv proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
+          </div>
           <div class="social">
             <i class="fa fa-facebook"></i>
             <i class="fa fa-twitter"></i>
@@ -365,45 +373,52 @@ h1 {
 .page {
   width: 100vw;
   height: 100vh;
-  right: 200px;
-  bottom: 60px;
+  /* right: 200px;
+  bottom: 60px; */
   min-height: 700px;
   overflow: hidden;
-  margin-left: -25px;
+  /* margin-left: -25px; */
   margin-top: 45px;
 }
 .PLTOne{
-  width: 500px;
-  height: 400px;
+  width: 50%;
+  height: 80%;
   border-radius: 28px;
   /*border: 1px solid #262626;*/
   float: right;
   background: white;
   box-shadow: 8px 4px 20px black;
-
+  -webkit-flex: 1;
+  flex: 1;
+  margin-inline: 10px;
+  top:10%
 }
 .PLTTwo{
-  width: 500px;
-  height: 400px;
+  width: 50%;
+  height: 80%;
   border-radius: 28px;
   /*border: 1px solid #262626;*/
   float: right;
   background: white;
   box-shadow: 8px 4px 20px black;
-
+  -webkit-flex: 1;
+  flex: 1;
+  margin-inline: 10px;
+  top:10%
 }
 .tabs-controls {
   position: relative;
-  z-index: 10;
-  left: 200px;
+  z-index: 1;
+  /* left: 200px; */
   display: flex;
   justify-content: center;
   align-items: stretch;
   width: 100%;
-  max-width: 800px;
+  max-width: 1500px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 50px 0 50px;
+  padding-bottom: 3vh;
+  /* padding: 50px 0 50px; */
   list-style-type: none;
 }
 .tabs-controls-link {
@@ -436,14 +451,16 @@ h1 {
 .cards-container {
   position: relative;
   z-index: 1;
-  width: 500px;
+  /* width: 500px; */
+  /* justify-content: center; */
   height: calc(100vh - 205px);
   margin: 0 auto;
+  
 }
 .card {
   position: absolute;
-  width: 1000px;
-  height: 600px;
+  width: 70vw;/*1000px;*/
+  height: 62vh;
   background:linear-gradient( to top,lightgreen,lightseagreen,#00c380);
   /*background-color: #00c380;*/
   border: 1px solid #423e37;
@@ -451,6 +468,10 @@ h1 {
   box-sizing: border-box;
   padding: 40px;
   transition: transform 0.3s, opacity 0.2s;
+  border-radius: 20px;
+  left: 14vw;
+  display:flex;
+  display: -webkit-flex;
 }
 .card.hidden {
   z-index: 100;
@@ -515,5 +536,12 @@ h1 {
   text-align: center;
   line-height: 35px;
   margin-top: 20px;
+}
+
+.PLTIntroduce{
+  width: 45%;
+  -webkit-flex: 1;
+  flex: 1;
+  margin-inline: 10px;
 }
 </style>
