@@ -1,20 +1,38 @@
-<!--html-->
 <template>
-  <div class="MainView">
-    <div class="banner-txt">
-      <h1>"装点旅途"</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laboriosam quas non at similique molestiae dolorum natus.</p>
-      <div class="jump_map">
-        <!--      <button class="button-main" @click="gotoSection('PartOne-1')">"桩"点旅途</button>-->
-        <!--      <button class="button-main" @click="gotoSection('PartTwo')">装“电”旅途</button>-->
-        <!--      <button class="button-main" @click="gotoSection('PartThree')">装点“绿”途</button>-->
-        <!--      <button class="button-main" @click="gotoSection('partnerSection')">总结</button>-->
-        <button class="button-main" @click="gotoIndexpage()">Index</button>
+  <div class="Partonepage">
+    <div class="container">
+      <div class="page" style="color: black; text-align: center" id="page1">Page1
+        <button class="button-right" @click="gotopage('page2')"></button>
+        <h1 style="color: #262626">这里是PartOnepage</h1>
+      </div>
+      <div class="page" style="color: black; text-align: center" id="page2" >Page2
+        <button class="button-left" @click="gotopage('page1')"></button>
+        <button class="button-right" @click="gotopage('page3')"></button>
+      </div>
+      <div class="page" style="color: black; text-align: center" id="page3" >Page3
+        <button class="button-left" @click="gotopage('page2')"></button>
+        <button class="button-right" @click="gotopage('page4')"></button>
+      </div>
+      <div class="page" style="color: black; text-align: center" id="page4" >Page4
+        <button class="button-left" @click="gotopage('page3')"></button>
+        <button class="button-right" @click="gotopage('page5')"></button>
+      </div>
+      <div class="page" style="color: black; text-align: center" id="page5" >Page5
+        <button class="button-left" @click="gotopage('page4')"></button>
+        <button class="button-right" @click="gotopage('page6')"></button>
+      </div>
+      <div class="page" style="color: black; text-align: center" id="page6" >Page6
+        <button class="button-left" @click="gotopage('page5')"></button>
+        <button class="button-right" @click="gotopage('page7')"></button>
+      </div>
+      <div class="page" style="color: black; text-align: center" id="page7">Page7
+        <button class="button-left" @click="gotopage('page6')"></button>
+        <Partone_03></Partone_03>
       </div>
     </div>
     <div class="moveview">
       <img class="car_red"   src="../assets/images/newAssets/car_red.png">
-<!--      <img class="car_PL"   src="../assets/images/newAssets/car_PL.png">-->
+      <!--      <img class="car_PL"   src="../assets/images/newAssets/car_PL.png">-->
       <img class="clouds01"   src="../assets/images/newAssets/cloud.png">
       <img class="clouds02"   src="../assets/images/newAssets/cloud.png">
 
@@ -40,81 +58,101 @@
       <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
       <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">
 
-<!--      <img class="cao01"   src="../assets/images/newAssets/cao01.png" v-for="i in 300">-->
+      <!--      <img class="cao01"   src="../assets/images/newAssets/cao01.png" v-for="i in 300">-->
 
 
       <!--      &lt;!&ndash;      <img class="tree01"   src="../assets/images/newAssets/tree01.png">&ndash;&gt;-->
-<!--      <img class="tree01"   src="../assets/images/newAssets/tree01.png">-->
+      <!--      <img class="tree01"   src="../assets/images/newAssets/tree01.png">-->
     </div>
-<!--    <p class="road-object">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>-->
-
   </div>
+  
 </template>
 
-<!--JavaScript-->
 <script setup>
-import { defineEmits } from "vue"
-import router from "@/router";
+import { ref, nextTick } from "vue";
+// import Partone_01 from "@/views/Partone_01.vue";
+// import Partone_02 from "@/views/Partone_02.vue";
+import Partone_03 from "@/views/Partone_03.vue";
 
-const emit = defineEmits(["SectionJump"]);
-function gotoSection(section){
-  emit("SectionJump",section);
+function gotopage(pageid) {
+  document.getElementById(pageid).scrollIntoView({ behavior: 'smooth' });
 }
-function gotoIndexpage (){
-  router.push({
-        path: "/Indexpage",
-      }
-  )
-}
+
 </script>
 
-<!--css-->
-<style scoped>
-.MainView {
+<style>
+.Partonepage{
   width: 100%;
   height: 100%;
-  /*overflow: hidden;*/
+  /*min-width: 100vw;*/
+  /*min-height: 100vh;*/
+  background-image: url("../assets/images/newAssets/banner-bg.jpg");
+  background-position: center ;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+}
+.container {
+  display: flex;
+  overflow-x: scroll;
+  bottom: 50px;
+}
+.page {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+}
 
+.page:nth-child(1) {
+  background: hsl(140deg, 50%, 50%);
 }
-.banner-txt{
-  top: 200px;
-  margin-left: 38%;
-  width: 500px;
-  text-align: center;
-  z-index: 1;
+
+.page:nth-child(2) {
+  background: hsl(210deg, 50%, 50%);
 }
-.banner-txt h1{
-  font-size: 50px;
-  font-weight: bold;
-  color: black;
+
+.page:nth-child(3) {
+  background: hsl(270deg, 50%, 50%);
 }
-.banner-txt p{
-  font-size: 18px;
-  font-weight: normal;
-  color: black;
+.page:nth-child(4) {
+  background: hsl(140deg, 50%, 50%);
 }
-.jump_map{
-  position: absolute;
+
+.page:nth-child(5) {
+  background: hsl(210deg, 50%, 50%);
 }
-.button-main{
-  width: 150px;
-  padding: 10px 0;
-  margin: 60px 10px;
-  border-radius: 25px;
+
+.page:nth-child(6) {
+  background: hsl(270deg, 50%, 50%);
+}
+.page:nth-child(7) {
+  background: hsl(140deg, 50%, 50%);
+}
+.button-left{
   border: 0;
-  background: gold;
-  color: #262626;
-  text-align: center;
-  font-family: PingFang_font;
-  font-size: 20px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 3%;
+  top: 45%;
+  background:url("../src/assets/images/newAssets/go_left.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  z-index: 999;
   cursor: pointer;
-  position: relative;
-  transition: 0.5s;
 }
-.button-main:hover{
-  background: #00FFFF;
-  transition: 0.5s;
-
+.button-right{
+  border: 0;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 3%;
+  top: 45%;
+  background:url("../src/assets/images/newAssets/go_right.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  z-index: 999;
+  cursor: pointer;
 }
 .moveview{
   width: 100%;
@@ -313,6 +351,7 @@ function gotoIndexpage (){
   top: 50%;
 }
 
+
 @keyframes shake {
   0% {
     transform: translate(0px, 0px);/*开始位置*/
@@ -339,5 +378,4 @@ function gotoIndexpage (){
   }
 
 }
-
 </style>

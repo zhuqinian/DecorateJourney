@@ -9,6 +9,8 @@ import * as ElementPlusIconsVue from "@element-plus/icons-vue";
 import "./assets/text/text_font.css"
 import "./assets/icon/add_button/iconfont.js"
 
+
+
 const app = createApp(App);
 
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {

@@ -6,10 +6,7 @@
       </el-menu-item>
       <div class="flex-grow" />
       <el-menu-item index="mainSection">首页</el-menu-item>
-      <el-menu-item index="PartOne-1">"桩"点旅途</el-menu-item>
-      <el-menu-item index="PartTwo">装“电”旅途</el-menu-item>
-      <el-menu-item index="PartThree">装点“绿”途</el-menu-item>
-      <el-menu-item index="partnerSection">总结</el-menu-item>
+
     </el-menu>
   </el-affix>
   <div class="content-wrapper">
@@ -18,38 +15,43 @@
         <MainView @SectionJump="gotoSection"></MainView>
       </div>
     </section>
-    <section id="PartOne-1">
-      <div class="inner-width PartOneSectionBg">
-        <!-- <CarRunning></CarRunning> -->
-        <Partone_01></Partone_01>
-      </div>
-    </section>
-    <section id="PartOne-2">
-      <div class="inner-width PartOneSectionBg">
-        <Partone_02></Partone_02>
-      </div>
-    </section>
-    <section id="PartOne-3">
-      <div class="inner-width PartOneSectionBg">
-        <Partone_03></Partone_03>
-      </div>
-    </section>
-    <section id="PartTwo">
-      <div class="inner-width PartTwoSectionBg">
-        <CarRunning02></CarRunning02>
-      </div>
-    </section>
+<!--    <section>-->
+<!--      <div class="inner-width mainSectionBg">-->
+<!--        <IndexJump @SectionJump="gotoSection"></IndexJump>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--    <section id="PartOne-1">-->
+<!--      <div class="inner-width PartOneSectionBg">-->
+<!--        &lt;!&ndash; <CarRunning></CarRunning> &ndash;&gt;-->
+<!--        <Partone_01></Partone_01>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--    <section id="PartOne-2">-->
+<!--      <div class="inner-width PartOneSectionBg">-->
+<!--        <Partone_02></Partone_02>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--    <section id="PartOne-3">-->
+<!--      <div class="inner-width PartOneSectionBg">-->
+<!--        <Partone_03></Partone_03>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--    <section id="PartTwo">-->
+<!--      <div class="inner-width PartTwoSectionBg">-->
+<!--        <CarRunning02></CarRunning02>-->
+<!--      </div>-->
+<!--    </section>-->
 
-    <section id="PartThree">
-      <div class="inner-width PartThreeSectionBg">
-      </div>
-    </section>
+<!--    <section id="PartThree">-->
+<!--      <div class="inner-width PartThreeSectionBg">-->
+<!--      </div>-->
+<!--    </section>-->
 
-    <section id="partnerSection">
-      <div class="inner-width partnerSectionBg">
-      </div>
-    </section>
-    <FooterView></FooterView>
+<!--    <section id="partnerSection">-->
+<!--      <div class="inner-width partnerSectionBg">-->
+<!--      </div>-->
+<!--    </section>-->
+<!--    <FooterView></FooterView>-->
   </div>
   
 </template>
@@ -58,11 +60,11 @@
 import { ref, nextTick } from "vue";
 import FooterView from "@/views/FooterView.vue";
 import MainView from "@/views/MainView.vue"
-import CarRunning from "@/views/CarRunning_01.vue"
-import CarRunning02 from "@/views/CarRunning_02.vue"
-// import Dinosuar from "@/views/Dinosuar.vue"
+import CarRunning02 from "@/views/CarRunning_02.vue";
+import Partone_01 from "@/views/Partone_01.vue";
 import Partone_02 from "@/views/Partone_02.vue"
 import Partone_03 from "@/views/Partone_03.vue";
+import IndexJump from "@/views/IndexJump.vue";
 
 
 const activeIndex = ref("");

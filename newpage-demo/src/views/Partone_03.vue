@@ -290,10 +290,10 @@ $(document).ready(function(){
   width: 30vw ;
   height: 70%;
   border-radius: 30px;
-  border: 1px solid #262626;
+  border: 1px solid gray;
   /* margin: 80px 0 30px 0; */
   /* left: 150px; */
-  background: #00c380;
+  background:linear-gradient( to top,lightgreen,lightseagreen,#00c380);
   z-index: 1;
   -webkit-flex: 1;
   flex: 1;
