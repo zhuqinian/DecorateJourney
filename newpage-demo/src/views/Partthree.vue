@@ -18,13 +18,10 @@
 
 </template>
 
-<script>
-export default {
-  methods: {
-    gotopage(pageid) {
-      document.getElementById(pageid).scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+<script setup>
+
+function gotopage(pageid) {
+  document.getElementById(pageid).scrollIntoView({ behavior: 'smooth' });
 }
 
 

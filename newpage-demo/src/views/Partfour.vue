@@ -1,9 +1,9 @@
 <template>
-  <div class="Parttwopage">
+  <div class="Partfourpage">
     <div class="container">
       <div class="page" style="color: black; text-align: center" id="page1">Page1
         <button class="button-right" @click="gotopage('page2')"></button>
-        <h1 style="color: #262626">这里是Parttwopage</h1>
+        <h1 style="color: #262626">这里是Partfourpage</h1>
       </div>
       <div class="page" style="color: black; text-align: center" id="page2" >Page2
         <button class="button-left" @click="gotopage('page1')"></button>
@@ -25,13 +25,10 @@ function gotopage(pageid) {
 }
 
 
-
-
-
 </script>
 
 <style>
-.Parttwopage{
+.Partfourpage{
   width: 100%;
   height: 100%;
   /*min-width: 100vw;*/
@@ -74,8 +71,6 @@ function gotopage(pageid) {
   background:url("../src/assets/images/newAssets/go_left.png");
   background-size:cover;
   background-repeat: no-repeat;
-  z-index: 999;
-  cursor: pointer;
 }
 .button-right{
   border: 0;
@@ -87,7 +82,6 @@ function gotopage(pageid) {
   background:url("../src/assets/images/newAssets/go_right.png");
   background-size:cover;
   background-repeat: no-repeat;
-  z-index: 999;
-  cursor: pointer;
+
 }
 </style>
