@@ -2,26 +2,34 @@
 <template>
   <div class="Indexpage">
     <div class="InexView">
-      <div class="banner-txt" style="bottom: 30px">
-        <h1>"装点旅途"</h1>
+<!--      <div class="banner-txt" style="bottom: 30px">-->
+<!--        <h1>"装点旅途"</h1>-->
+<!--      </div>-->
+      <div class="titleimg">
+        <img src="src/assets/images/newAssets/indextitle.png">
       </div>
+<!--      <div class="textbg">-->
+<!--        <img src="src/assets/images/newAssets/indexjumpmap.png">-->
+<!--      </div>-->
       <div class="jump_map">
 <!--        <button class="button-main" @click="gotoPartonepage()">"桩"点旅途</button>-->
 <!--        <button class="button-main" @click="gotoParttwopage()">装“电”旅途</button>-->
 <!--        <button class="button-main" @click="gotoPartthreepage()">装点“绿”途</button>-->
 <!--        <button class="button-main" @click="gotoSection('partnerSection')">总结</button>-->
-        <button class="button-main" @click="gotoIndexpage()">back</button>
+<!--        <button class="button-main" @click="gotoIndexpage()">back</button>-->
         <div class="partone">
-          <img src="src/assets/images/background/sunny.png" @click="gotoPartonepage()">
+          <img src="src/assets/images/newAssets/indexbg_11.png" @click="gotoPartonepage()">
+          <img src="src/assets/images/newAssets/indexbg_10.png" @click="gotoPartonepage()" style="bottom: 305px">
+
         </div>
         <div class="parttow">
-          <img src="src/assets/images/background/sunny.png" @click="gotoParttwopage()">
-        </div>
+          <img src="src/assets/images/newAssets/indexbg_21.png" @click="gotoParttwopage()">
+          <img src="../assets/images/newAssets/indexbg_20.png" @click="gotoParttwopage()" style="bottom: 305px">        </div>
         <div class="partthree">
-          <img src="src/assets/images/background/sunny.png" @click="gotoPartthreepage()">
+          <img src="src/assets/images/newAssets/indexbg02.png" @click="gotoPartthreepage()" style="bottom: 100px">
         </div>
         <div class="partfour">
-          <img src="src/assets/images/background/sunny.png" @click="gotoPartfourpage()">
+          <img src="src/assets/images/newAssets/indexbg04.png" @click="gotoPartfourpage()" style="bottom: 120px">
         </div>
 
       </div>
@@ -75,13 +83,26 @@ function gotoIndexpage (){
 <style scoped>
 .jump_map{
   position: absolute;
-  width: 1400px;
+  width: 1000px;
   height: auto;
-  left: 0;
-  top: 30px;
+  left: 590px;
+  top: 60px;
   right: 0;
   bottom: 0;
   margin: auto;
+  /*visibility: hidden;*/
+}
+.titleimg{
+  bottom: 200px;
+  float: left;
+  left: 80px;
+}
+.textbg{
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 .button-main{
   position: absolute;
@@ -104,56 +125,66 @@ function gotoIndexpage (){
   transition: 0.5s;
 }
 .partone{
-  position: relative;
-  width: 500px;
-  height: 350px;
+  position: absolute;
+  width: 295px;
+  height: 180px;
+  left: 100px;
   border-radius: 30px;
-  border: 1px solid gray;
   display:inline-block;
-  margin: 20px 20px 20px 20px;
-  background-color: green;
-  overflow: hidden;
-
+  align-items: center;
+  overflow: visible;
 }
 .parttow{
-  position: relative;
-  width: 500px;
-  height: 350px;
+  position: absolute;
+  width: 295px;
+  height: 180px;
+  left: 430px;
   border-radius: 30px;
-  border: 1px solid gray;
+  /*border: 1px solid gray;*/
   display:inline-block;
-  margin: 20px 20px 20px 20px;
-  background-color: yellowgreen;
-  overflow: hidden;
+  /*overflow: hidden;*/
 
 }
 .partthree{
-  position: relative;
-  width: 500px;
-  height: 350px;
+  position: absolute;
+  width: 295px;
+  height: 180px;
+  left: 100px;
+  top: 340px;
   border-radius: 30px;
-  border: 1px solid gray;
+  /*border: 1px solid gray;*/
   display:inline-block;
-  margin: 10px 20px 20px 20px;
   background-color: royalblue;
-  overflow: hidden;
+  /*overflow: hidden;*/
 
 }
 .partfour{
-  position: relative;
-  width: 500px;
-  height: 350px;
+  position: absolute;
+  width: 295px;
+  height: 180px;
+  left: 430px;
+  top: 350px;
+
   border-radius: 30px;
-  border: 1px solid gray;
+  /*border: 1px solid gray;*/
   display:inline-block;
-  margin: 10px 20px 20px 20px;
   background-color: purple;
-  overflow: hidden;
+  /*overflow: hidden;*/
 
 }
+/*.partone img{*/
+/*  width: 300px;*/
+/*  height: 300px;*/
+/*  cursor: pointer;*/
+/*  transition: 1s;*/
+/*}*/
+/*.partone img:hover{*/
+/*  opacity: 0;*/
+/*  content: url("src/assets/images/newAssets/indexbg_11.png");*/
+/*}*/
 .jump_map img{
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 300px;
   cursor: pointer;
   transition: 1s;
 }
@@ -173,10 +204,12 @@ function gotoIndexpage (){
 
   width: 100%;
   height: 100%;
-  background-image: url("../assets/images/newAssets/banner-bg.jpg");
+  background-image: url("../assets/images/background/green.png");
   background-position: center ;
   background-repeat: no-repeat;
+  background-size:100% 100%;
   position: fixed;
+
   top: 0;
 }
 </style>

@@ -8,6 +8,7 @@
       <div class="page" style="color: black; text-align: center" id="page2" >Page2
         <button class="button-left" @click="gotopage('page1')"></button>
         <button class="button-right" @click="gotopage('page3')"></button>
+        <iframe src="https://dycharts.com/xshow/index.html?id=c_a7f928624bdd1ebb9b84a5baacf3ecab" width="600" height="510" scrolling="no" frameborder="0" align=""></iframe>
       </div>
       <div class="page" style="color: black; text-align: center" id="page3" >Page3
         <button class="button-left" @click="gotopage('page2')"></button>

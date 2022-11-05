@@ -1,13 +1,13 @@
 <template>
   <el-affix :offset="0" >
-    <el-menu :default-active="activeIndex" class="nav" mode="horizontal" @select="handleSelect" :ellipsis="false" >
-      <el-menu-item index="mainSection">
-        <img class="logo_img" src="../assets/images/newAssets/LOGO.png" alt="">
-      </el-menu-item>
-      <div class="flex-grow" />
-      <el-menu-item index="mainSection">首页</el-menu-item>
+<!--    <el-menu :default-active="activeIndex" class="nav" mode="horizontal" @select="handleSelect" :ellipsis="false" >-->
+<!--      <el-menu-item index="mainSection">-->
+<!--        <img class="logo_img" src="../assets/images/newAssets/LOGO.png" alt="">-->
+<!--      </el-menu-item>-->
+<!--      <div class="flex-grow" />-->
+<!--      <el-menu-item index="mainSection">首页</el-menu-item>-->
 
-    </el-menu>
+<!--    </el-menu>-->
   </el-affix>
   <div class="content-wrapper">
     <section id="mainSection">
@@ -112,7 +112,7 @@ section {
 
 .inner-width {
   width: 100%;
-  height: 95vh
+  height: 100vh
 }
 
 .content-wrapper {
@@ -124,9 +124,10 @@ section {
 .PartTwoSectionBg,
 .PartThreeSectionBg,
 .partnerSectionBg {
-  background-image: url("../assets/images/newAssets/banner-bg.jpg");
+  background-image: url("../assets/images/background/green.png");
   background-size: cover;
   background-position: center ;
+  overflow: hidden;
 }
 
 

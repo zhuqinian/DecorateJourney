@@ -3,7 +3,7 @@
   <div class="MainView">
     <div class="banner-txt">
       <h1>"装点旅途"</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laboriosam quas non at similique molestiae dolorum natus.</p>
+      <p>新能源汽车作为一种发展前景广阔的绿色交通工具，是开展电能替代、挖掘交通减碳潜力、提升交通电气化水平的重要手段，能够有效降低我国对进口原油的依赖程度，也是兑现“碳达峰、碳中和”承诺的重要途径，新能源汽车已经成为一个重要的国家级发展战略产业</p>
       <div class="jump_map">
         <!--      <button class="button-main" @click="gotoSection('PartOne-1')">"桩"点旅途</button>-->
         <!--      <button class="button-main" @click="gotoSection('PartTwo')">装“电”旅途</button>-->
@@ -87,19 +87,26 @@ function gotoIndexpage (){
   font-size: 50px;
   font-weight: bold;
   color: black;
+  margin-bottom: 50px;
 }
 .banner-txt p{
-  font-size: 18px;
-  font-weight: normal;
-  color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.8em;
+  color: #777;
+  text-indent: 2em;
 }
 .jump_map{
   position: absolute;
 }
 .button-main{
   width: 150px;
+  height: auto;
   padding: 10px 0;
-  margin: 60px 10px;
+  top: 50px;
+  left: 170px;
+  margin: auto;
   border-radius: 25px;
   border: 0;
   background: gold;
