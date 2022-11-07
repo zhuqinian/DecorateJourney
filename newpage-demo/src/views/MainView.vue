@@ -12,40 +12,40 @@
         <button class="button-main" @click="gotoIndexpage()">Index</button>
       </div>
     </div>
-    <div class="moveview">
-      <img class="car_red"   src="../assets/images/newAssets/car_red.png">
-<!--      <img class="car_PL"   src="../assets/images/newAssets/car_PL.png">-->
-      <img class="clouds01"   src="../assets/images/newAssets/cloud.png">
-      <img class="clouds02"   src="../assets/images/newAssets/cloud.png">
+<!--    <div class="moveview">-->
+<!--      <img class="car_red"   src="../assets/images/newAssets/car_red.png">-->
+<!--&lt;!&ndash;      <img class="car_PL"   src="../assets/images/newAssets/car_PL.png">&ndash;&gt;-->
+<!--      <img class="clouds01"   src="../assets/images/newAssets/cloud.png">-->
+<!--      <img class="clouds02"   src="../assets/images/newAssets/cloud.png">-->
 
-      <img class="buildings01"   src="../assets/images/newAssets/building_01.png">
-      <img class="buildings02"   src="../assets/images/newAssets/building_02.png">
-      <img class="buildings03"   src="../assets/images/newAssets/building_high.png">
-      <img class="buildings04"   src="../assets/images/newAssets/school.png">
-      <img class="buildings05"   src="../assets/images/newAssets/autosale.png">
+<!--      <img class="buildings01"   src="../assets/images/newAssets/building_01.png">-->
+<!--      <img class="buildings02"   src="../assets/images/newAssets/building_02.png">-->
+<!--      <img class="buildings03"   src="../assets/images/newAssets/building_high.png">-->
+<!--      <img class="buildings04"   src="../assets/images/newAssets/school.png">-->
+<!--      <img class="buildings05"   src="../assets/images/newAssets/autosale.png">-->
 
-      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">
+<!--      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="../assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="../assets/images/newAssets/Ytree01.png">-->
 
-<!--      <img class="cao01"   src="../assets/images/newAssets/cao01.png" v-for="i in 300">-->
+<!--&lt;!&ndash;      <img class="cao01"   src="../assets/images/newAssets/cao01.png" v-for="i in 300">&ndash;&gt;-->
 
 
-      <!--      &lt;!&ndash;      <img class="tree01"   src="../assets/images/newAssets/tree01.png">&ndash;&gt;-->
-<!--      <img class="tree01"   src="../assets/images/newAssets/tree01.png">-->
-    </div>
+<!--      &lt;!&ndash;      &lt;!&ndash;      <img class="tree01"   src="../assets/images/newAssets/tree01.png">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      <img class="tree01"   src="../assets/images/newAssets/tree01.png">&ndash;&gt;-->
+<!--    </div>-->
 <!--    <p class="road-object">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>-->
 
   </div>

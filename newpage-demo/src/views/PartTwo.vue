@@ -1,9 +1,9 @@
 <template>
   <div class="Parttwopage">
     <div class="container">
-      <div class="page" style="color: black; text-align: center" id="page1">Page1
+      <div class="page" style="color: black; text-align: center" id="page1">
         <button class="button-right" @click="gotopage('page2')"></button>
-        <h1 style="color: #262626">这里是Parttwopage</h1>
+        <Parttwo_01></Parttwo_01>
       </div>
       <div class="page" style="color: black; text-align: center" id="page2" >Page2
         <button class="button-left" @click="gotopage('page1')"></button>
@@ -19,6 +19,7 @@
 </template>
 
 <script setup>
+import Parttwo_01 from "@/views/PartTwopage/Parttwo_01.vue";
 
 function gotopage(pageid) {
   document.getElementById(pageid).scrollIntoView({ behavior: 'smooth' });
@@ -45,7 +46,8 @@ function gotopage(pageid) {
 .container {
   display: flex;
   overflow-x: scroll;
-  bottom: 50px;
+  bottom: 0;
+  overflow-y: hidden;
 }
 .page {
   width: 100vw;
@@ -54,7 +56,7 @@ function gotopage(pageid) {
 }
 
 .page:nth-child(1) {
-  background: hsl(140deg, 50%, 50%);
+  background: hsl(140deg, 50%, 100%);
 }
 
 .page:nth-child(2) {
@@ -74,6 +76,7 @@ function gotopage(pageid) {
   background:url("../src/assets/images/newAssets/go_left.png");
   background-size:cover;
   background-repeat: no-repeat;
+  filter:contrast(30%);
   z-index: 999;
   cursor: pointer;
 }
@@ -87,6 +90,7 @@ function gotopage(pageid) {
   background:url("../src/assets/images/newAssets/go_right.png");
   background-size:cover;
   background-repeat: no-repeat;
+  filter:contrast(30%);
   z-index: 999;
   cursor: pointer;
 }

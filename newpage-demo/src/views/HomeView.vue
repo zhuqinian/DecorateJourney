@@ -58,13 +58,8 @@
 
 <script setup lang="ts">
 import { ref, nextTick } from "vue";
-import FooterView from "@/views/FooterView.vue";
 import MainView from "@/views/MainView.vue"
-import CarRunning02 from "@/views/CarRunning_02.vue";
-import Partone_01 from "@/views/Partone_01.vue";
-import Partone_02 from "@/views/Partone_02.vue"
-import Partone_03 from "@/views/Partone_03.vue";
-import IndexJump from "@/views/IndexJump.vue";
+
 
 
 const activeIndex = ref("");
