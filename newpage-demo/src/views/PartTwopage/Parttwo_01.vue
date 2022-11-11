@@ -1,33 +1,28 @@
-<!--html-->
 <template>
-  <div class="Parttwo_01">
-    <img class="title" src="@/assets/images/PartTwo/title01.png">
-    <img class="text" src="@/assets/images/PartTwo/text01.png">
+  <div class="Partwopage_1">
+    <img class="title_01" src="../../assets/images/PartTwo/Part2title.png">
   </div>
+
 </template>
 
-<!--JavaScript-->
 <script>
 
 </script>
 
-<!--css-->
 <style>
-.Parttwo_01 {
+.Partwopage_1{
   width: 100%;
   height: 100%;
 }
-.title{
-  width: 40%;
+.title_01{
   position: absolute;
-  bottom: 330px;
-  z-index: 1;
-  left: 10%;
+  width: 90%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
-.text{
-  position: absolute;
-  z-index: 0;
-  left: 35%;
-  box-shadow: 110px 0 100px 100px white;
-}
+
 </style>

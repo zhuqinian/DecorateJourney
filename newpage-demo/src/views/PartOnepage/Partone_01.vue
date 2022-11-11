@@ -1,6 +1,6 @@
 <template>
   <div class="Partonepage_1">
-      <img class="title" src="src/assets/images/PartOne/all01.png">
+      <img class="title_01" src="../../assets/images/PartOne/POtitle.png">
   </div>
   
 </template>
@@ -14,9 +14,9 @@
   width: 100%;
   height: 100%;
 }
-.title{
+.title_01{
   position: absolute;
-  width: 89%;
+  width: 90%;
   height: 100%;
   top: 0;
   bottom: 0;

@@ -1,17 +1,27 @@
 <template>
   <div class="Partthreepage">
     <div class="container">
-      <div class="page" style="color: black; text-align: center" id="page1">Page1
+      <div class="page" style="color: black; text-align: center" id="page1">
         <button class="button-right" @click="gotopage('page2')"></button>
-        <h1 style="color: #262626">这里是Partthreepage</h1>
+        <Parttwo_01></Parttwo_01>
       </div>
-      <div class="page" style="color: black; text-align: center" id="page2" >Page2
+      <div class="page" style="color: black; text-align: center" id="page2" >
         <button class="button-left" @click="gotopage('page1')"></button>
         <button class="button-right" @click="gotopage('page3')"></button>
+        <Parttwo_02></Parttwo_02>
       </div>
       <div class="page" style="color: black; text-align: center" id="page3">Page3
         <button class="button-left" @click="gotopage('page2')"></button>
+        <button class="button-right" @click="gotopage('page4')"></button>
 
+      </div>
+      <div class="page" style="color: black; text-align: center" id="page4" >Page4
+        <button class="button-left" @click="gotopage('page3')"></button>
+        <button class="button-right" @click="gotopage('page5')"></button>
+      </div>
+      <div class="page" style="color: black; text-align: center" id="page5" >Page5
+        <button class="button-left" @click="gotopage('page4')"></button>
+        <button class="button-right" @click="gotopage('page1')"></button>
       </div>
     </div>
   </div>
@@ -19,6 +29,9 @@
 </template>
 
 <script setup>
+import Parttwo_01 from "@/views/PartTwopage/Parttwo_01.vue";
+import Parttwo_02 from "@/views/PartTwopage/Parttwo_02.vue";
+
 
 function gotopage(pageid) {
   document.getElementById(pageid).scrollIntoView({ behavior: 'smooth' });
@@ -36,7 +49,7 @@ function gotopage(pageid) {
   height: 100%;
   /*min-width: 100vw;*/
   /*min-height: 100vh;*/
-  background-image: url("../assets/images/newAssets/banner-bg.jpg");
+  background-image: url("../assets/images/background/PartOnebg.png");
   background-position: center ;
   background-repeat: no-repeat;
   position: fixed;
@@ -45,7 +58,8 @@ function gotopage(pageid) {
 .container {
   display: flex;
   overflow-x: scroll;
-  bottom: 50px;
+  bottom: 0;
+  overflow-y: hidden;
 }
 .page {
   width: 100vw;
@@ -54,37 +68,39 @@ function gotopage(pageid) {
 }
 
 .page:nth-child(1) {
-  background: hsl(140deg, 50%, 50%);
 }
 
 .page:nth-child(2) {
-  background: hsl(210deg, 50%, 50%);
 }
 
 .page:nth-child(3) {
-  background: hsl(270deg, 50%, 50%);
 }
 .button-left{
   border: 0;
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 400px;
   position: absolute;
-  left: 3%;
-  top: 45%;
-  background:url("../src/assets/images/newAssets/go_left.png");
+  left: -3%;
+  top: 25%;
+  background:url("../src/assets/images/newAssets/goleft_new.png");
   background-size:cover;
   background-repeat: no-repeat;
+  /*filter:contrast(10%);*/
+  z-index: 999;
+  cursor: pointer;
 }
 .button-right{
   border: 0;
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 400px;
   position: absolute;
-  right: 3%;
-  top: 45%;
-  background:url("../src/assets/images/newAssets/go_right.png");
+  right: 0;
+  top: 25%;
+  background:url("../src/assets/images/newAssets/goright_new.png");
   background-size:cover;
   background-repeat: no-repeat;
-
+  /*filter:contrast(0%);*/
+  z-index: 1000;
+  cursor: pointer;
 }
 </style>

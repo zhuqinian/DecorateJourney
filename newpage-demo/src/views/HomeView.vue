@@ -15,11 +15,11 @@
         <MainView @SectionJump="gotoSection"></MainView>
       </div>
     </section>
-<!--    <section>-->
-<!--      <div class="inner-width mainSectionBg">-->
-<!--        <IndexJump @SectionJump="gotoSection"></IndexJump>-->
-<!--      </div>-->
-<!--    </section>-->
+    <section id="JumpSection">
+      <div class="inner-width jumpSectionBg">
+        <JumpView></JumpView>
+      </div>
+    </section>
 <!--    <section id="PartOne-1">-->
 <!--      <div class="inner-width PartOneSectionBg">-->
 <!--        &lt;!&ndash; <CarRunning></CarRunning> &ndash;&gt;-->
@@ -59,6 +59,8 @@
 <script setup lang="ts">
 import { ref, nextTick } from "vue";
 import MainView from "@/views/MainView.vue"
+import JumpView from "@/views/IndexJump.vue"
+
 
 
 
@@ -119,12 +121,17 @@ section {
 .PartTwoSectionBg,
 .PartThreeSectionBg,
 .partnerSectionBg {
-  background-image: url("../assets/images/background/green.png");
+  background-image: url("../assets/images/background/homebg.gif");
   background-size: cover;
   background-position: center ;
   overflow: hidden;
 }
-
+.jumpSectionBg{
+  background-image: url("../assets/images/background/indexbg_1.png");
+  background-size: cover;
+  background-position: center ;
+  overflow: hidden;
+}
 
 
 </style>
