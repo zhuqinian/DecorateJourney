@@ -5,14 +5,25 @@
 <!--    <img class="background_03" src="../../assets/images/PartOne/pageone_bg.png">-->
     <img class="title_03" src="../../assets/images/PartOne/pageone03_title_new.png">
     <div class="chart_103">
-      <iframe src="https://dycharts.com/xshow/index.html?id=26ce08b0fb8664e7fdb20106fe467fbc"  scrolling="no" frameborder="0" align=""></iframe>
+      <el-carousel trigger="click" height="550px">
+        <el-carousel-item v-for="item in iframeUrl" :key="item">
+          <iframe :src = "item.idView"  class = "iframeBox" scrolling="no" frameborder="0" align=""></iframe>
+        </el-carousel-item>
+      </el-carousel>
+<!--      <iframe src="https://dycharts.com/xshow/index.html?id=26ce08b0fb8664e7fdb20106fe467fbc"  scrolling="no" frameborder="0" align=""></iframe>-->
     </div>
   </div>
 </template>
 
 <!--JavaScript-->
-<script>
+<script setup>
+var span = document.querySelectorAll('span');
+const iframeUrl = [
+  { id: 0, idView: "https://dycharts.com/xshow/index.html?id=26ce08b0fb8664e7fdb20106fe467fbc" },
+  { id: 1, idView: "https://dycharts.com/xshow/index.html?id=1b29636cc272c8a04d3b52f707a9f3ed" },
 
+
+]
 
 </script>
 
@@ -52,7 +63,7 @@
   left: 135px;
   /*border: 3px solid #262626;*/
   border-radius: 30px;
-  z-index: 3;
+  z-index: 1001;
   background: #F8F8FF;
   overflow: hidden;
 }

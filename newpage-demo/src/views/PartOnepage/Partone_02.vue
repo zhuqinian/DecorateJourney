@@ -18,7 +18,6 @@
 
 <!--JavaScript-->
 <script setup>
-var span = document.querySelectorAll('span');
 const iframeUrl = [
   { id: 0, idView: "https://dycharts.com/xshow/index.html?id=73d8154c05ab3431e6c3e8925ae2d393" },
   { id: 1, idView: "https://dycharts.com/xshow/index.html?id=f5776f3011bb19a7e86c6dd03d03bb33" },
