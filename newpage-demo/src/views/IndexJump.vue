@@ -55,12 +55,6 @@ function gotoPartfourpage (){
       }
   )
 }
-function gotoIndexpage (){
-  router.push({
-        path: "/",
-      }
-  )
-}
 </script>
 
 <!--css-->

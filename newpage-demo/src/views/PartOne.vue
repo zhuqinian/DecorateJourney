@@ -24,7 +24,7 @@
       </div>
       <div class="page" style="color: black; text-align: center" id="page5" >Page5
         <button class="button-left" @click="gotopage('page4')"></button>
-        <button class="button-right" @click="gotopage('page1')"></button>
+        <button class="button-right" @click="gotoIndexpage()"></button>
       </div>
 <!--      <div class="page" style="color: black; text-align: center" id="page6" >Page6-->
 <!--        <button class="button-left" @click="gotopage('page5')"></button>-->
@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-import { ref, nextTick } from "vue";
+import {ref, nextTick, defineEmits} from "vue";
 // import Partone_01 from "@/views/Partone_01.vue";
 // import Partone_02 from "@/views/Partone_02.vue";
 import Partone_01 from "@/views/PartOnepage/Partone_01.vue";
@@ -50,12 +50,18 @@ import Partone_03 from "@/views/PartOnepage/Partone_03.vue";
 import Partone_06 from "@/views/PartOnepage/Partone_06.vue";
 import Partone_04 from "@/views/PartOnepage/Partone_04.vue";
 import CarRunning from "@/views/elements/CarRunning.vue";
+import router from "@/router";
 
 
 function gotopage(pageid) {
   document.getElementById(pageid).scrollIntoView({ behavior: 'smooth' });
 }
 
+function gotoIndexpage (){
+  router.push({
+        path: "/",
+      }
+  )}
 </script>
 
 <style>

@@ -21,7 +21,7 @@
       </div>
       <div class="page" style="color: black; text-align: center" id="page5" >Page5
         <button class="button-left" @click="gotopage('page4')"></button>
-        <button class="button-right" @click="gotopage('page1')"></button>
+        <button class="button-right" @click="gotoIndexpage()"></button>
       </div>
     </div>
   </div>
@@ -31,13 +31,18 @@
 <script setup>
 import Parttwo_01 from "@/views/PartTwopage/Parttwo_01.vue";
 import Parttwo_02 from "@/views/PartTwopage/Parttwo_02.vue";
+import router from "@/router";
 
 
 function gotopage(pageid) {
   document.getElementById(pageid).scrollIntoView({ behavior: 'smooth' });
 }
 
-
+function gotoIndexpage (){
+  router.push({
+        path: "/",
+      }
+  )}
 
 
 
