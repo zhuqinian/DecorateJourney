@@ -29,14 +29,14 @@
       </div>
       <div class="page" style="color: black; text-align: center" id="page5" >
         <button class="button-left" @click="gotopage('page4')"></button>
-        <button class="button-right" @click="gotopage('page6')"></button>
+        <button class="button-right" @click="gotoIndexpage()"></button>
         <Partone_05></Partone_05>
       </div>
-      <div class="page" style="color: black; text-align: center" id="page6" >
-        <button class="button-left" @click="gotopage('page5')"></button>
-        <button class="button-right" @click="gotoIndexpage()"></button>
-<!--        <Partone_06></Partone_06>-->
-      </div>
+<!--      <div class="page" style="color: black; text-align: center" id="page6" >-->
+<!--        <button class="button-left" @click="gotopage('page5')"></button>-->
+<!--        <button class="button-right" @click="gotoIndexpage()"></button>-->
+<!--&lt;!&ndash;        <Partone_06></Partone_06>&ndash;&gt;-->
+<!--      </div>-->
 <!--      <div class="page" style="color: black; text-align: center" id="page7">-->
 <!--        <button class="button-left" @click="gotopage('page6')"></button>-->
 <!--        <button class="button-right" @click="gotoIndexpage()"></button>-->
@@ -127,38 +127,38 @@ Partone_01{
 }
 .page:nth-child(2) {
   /*background: hsl(140deg, 50%, 100%);*/
-  z-index: 99;
+  /*z-index: 100;*/
 }
 
 .page:nth-child(3) {
   /*background: hsl(210deg, 50%, 50%);*/
-  z-index: 99;
+  /*z-index: 101;*/
 
 }
 
 .page:nth-child(4) {
   /*background: hsl(270deg, 50%, 50%);*/
-  z-index: 99;
+  /*z-index: 101;*/
 
 }
 .page:nth-child(5) {
   /*background: hsl(140deg, 50%, 50%);*/
-  z-index: 99;
+  /*z-index: 101;*/
 
 }
 
 .page:nth-child(6) {
   background: url("../assets/images/background/bgcolor.png");
-  z-index: 99;
+  /*z-index: 99;*/
 
 }
 
 .page:nth-child(7) {
   background: url("../assets/images/background/bgcolor.png");
 }
-.page:nth-child(7) {
-  /*background: hsl(140deg, 50%, 50%);*/
-}
+/*.page:nth-child(7) {*/
+/*  !*background: hsl(140deg, 50%, 50%);*!*/
+/*}*/
 
 .button-go{
   border: 0;
