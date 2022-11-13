@@ -29,7 +29,7 @@
       </div>
       <div class="page" style="color: black; text-align: center" id="page5" >
         <button class="button-left" @click="gotopage('page4')"></button>
-        <button class="button-right" @click="gotoIndexpage()"></button>
+        <button class="button-right" @click="gotoIndexpage('/','JumpSection')"></button>
         <Partone_05></Partone_05>
       </div>
 <!--      <div class="page" style="color: black; text-align: center" id="page6" >-->
@@ -72,11 +72,14 @@ function gotopage(pageid) {
   document.getElementById(pageid).scrollIntoView({ behavior: 'smooth' });
 }
 
-function gotoIndexpage (){
-  router.push({
-        path: "/",
-      }
-  )}
+function gotoIndexpage (path,id){
+  var path = path;
+  var id = id;
+  localStorage.setItem('toId',id);
+  router.push(path);
+}
+
+  
 </script>
 
 <style>

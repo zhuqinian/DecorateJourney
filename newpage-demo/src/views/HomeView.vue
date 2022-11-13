@@ -57,11 +57,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, nextTick } from "vue";
+import { ref, nextTick, onMounted ,} from "vue";
 import MainView from "@/views/MainView.vue"
 import JumpView from "@/views/IndexJump.vue"
-
-
 
 
 const activeIndex = ref("");
@@ -76,6 +74,23 @@ const gotoSection = (SectionID: any) => {
   handleSelect(SectionID,"")
 }
 
+nextTick(()=>{toLocal()})
+onMounted(()=> {
+    nextTick(function(){
+			window.addEventListener('scroll',this.handleScroll)
+	})
+})
+
+function toLocal(){
+		//查找存储的锚点id
+		let Id=localStorage.getItem('toId');
+		let toElement=document.getElementById(Id);
+		//锚点存在跳转
+		if(Id){
+			toElement.scrollIntoView()
+		}
+    localStorage.setItem('toId','');
+}
 </script>
 
 <style scoped>
