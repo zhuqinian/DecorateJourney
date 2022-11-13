@@ -67,10 +67,10 @@ function gotoPartfourpage (){
 
 .partone{
   position: absolute;
-  width: 420px;
-  height: 400px;
-  right: 25%;
-  top: -80px;
+  width: 620px;
+  height: 600px;
+  right: 20%;
+  top: -90px;
   border-radius: 30px;
   display:inline-block;
   align-items: center;
@@ -92,10 +92,10 @@ function gotoPartfourpage (){
 }
 .parttwo{
   position: absolute;
-  width: 310px;
-  height: 300px;
-  top: 60px;
-  right: 6%;
+  width: 380px;
+  height: 380px;
+  top: 10px;
+  right: 3%;
   border-radius: 30px;
   display:inline-block;
   align-items: center;
@@ -117,9 +117,9 @@ function gotoPartfourpage (){
 }
 .partthree{
   position: absolute;
-  width: 310px;
-  height: 300px;
-  top: 350px;
+  width: 380px;
+  height: 380px;
+  top: 500px;
   right: 27%;
   border-radius: 30px;
   display:inline-block;
@@ -142,9 +142,9 @@ function gotoPartfourpage (){
 }
 .partfour{
   position: absolute;
-  width: 430px;
-  height: 400px;
-  top: 460px;
+  width: 520px;
+  height: 500px;
+  top: 390px;
   right: 0;
   border-radius: 30px;
   display:inline-block;

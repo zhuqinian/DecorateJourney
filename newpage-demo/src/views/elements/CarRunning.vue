@@ -2,32 +2,33 @@
 <template>
   <div class="CarRunning">
     <div class="moveview">
-      <img class="car_red"   src="@/assets/images/newAssets/car_red.png">
-      <!--      <img class="car_PL"   src="../assets/images/newAssets/car_PL.png">-->
-      <img class="clouds01"   src="@/assets/images/newAssets/cloud.png">
-      <img class="clouds02"   src="@/assets/images/newAssets/cloud.png">
+      <img class="car_red"   src="@/assets/images/car/car.gif">
+<!--      <img class="clouds01"   src="@/assets/images/newAssets/cloud.png">-->
+<!--      <img class="clouds02"   src="@/assets/images/newAssets/cloud.png">-->
 
-      <img class="buildings01"   src="@/assets/images/newAssets/building_01.png">
-      <img class="buildings02"   src="@/assets/images/newAssets/building_02.png">
-      <img class="buildings03"   src="@/assets/images/newAssets/building_high.png">
-      <img class="buildings04"   src="@/assets/images/newAssets/school.png">
-      <img class="buildings05"   src="@/assets/images/newAssets/autosale.png">
+      <img class="buildings01"   src="@/assets/images/background/citybg01.png">
+      <img class="buildings02"   src="@/assets/images/background/citybg02.png">
+<!--      <img class="buildings03"   src="@/assets/images/newAssets/building_high.png">-->
+<!--      <img class="buildings04"   src="@/assets/images/newAssets/school.png">-->
+<!--      <img class="buildings05"   src="@/assets/images/newAssets/autosale.png">-->
 
-      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">
-      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">
+      <img class="tree01"   src="@/assets/images/background/charge.png">
+      <img class="tree01"   src="@/assets/images/background/charge.png">
+      <img class="tree01"   src="@/assets/images/background/charge.png">
+
+      <!--      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree01"   src="@/assets/images/newAssets/Ytree01.png">-->
+<!--      <img class="tree11"   src="@/assets/images/newAssets/Ytree01.png">-->
 
       <!--      <img class="cao01"   src="../assets/images/newAssets/cao01.png" v-for="i in 300">-->
 
@@ -48,7 +49,7 @@
 .CarRunning {
   width: 100%;
   height: 100%;
-  z-index: 100;
+  z-index: 20;
 }
 .moveview{
   width: 100%;
@@ -59,33 +60,20 @@
 }
 .car_red{
   position: absolute;
-  bottom: 300px;
+  bottom: 195px;
   left: 47%;
-  width: 150px;
-  height: 100px;
+  width: 290px;
+  height: 300px;
   margin: 0;
   padding: 0;
-  /*transform:scaleX(-1);*/
+  transform:scaleX(-1);
   z-index: 1;
 
 
-  animation: shake  0.28s  infinite alternate;
+  /*animation: shake  0.28s  infinite alternate;*/
 
 }
-.car_PL{
-  position: absolute;
-  bottom: 300px;
-  right: 300px;
-  width: 150px;
-  height: 100px;
-  margin: 0;
-  padding: 0;
-  /*transform:scaleX(-1);*/
-  z-index: 1;
 
-  animation: shake  0.3s  infinite alternate;
-
-}
 .clouds01{
   position: absolute;
   bottom: 800px;
@@ -116,29 +104,29 @@
 }
 .buildings01{
   position: absolute;
-  bottom: 295px;
-  left: -290px;
-  width: 250px;
-  height: 200px;
+  bottom: 225px;
+  left: -1100px;
+  width: 1050px;
+  height: 600px;
   margin: 0;
   padding: 0;
   transform:scaleX(-1);
   z-index: 0;
-  animation: roadmove  13s linear infinite ;
+  animation: citymove  33s linear infinite ;
   animation-delay: 0.34s
 }
 .buildings02{
   position: absolute;
-  bottom: 295px;
-  left: -290px;
-  width: 250px;
-  height: 300px;
+  bottom: 205px;
+  left: -1100px;
+  width: 1050px;
+  height: 600px;
   margin: 0;
   padding: 0;
   transform:scaleX(-1);
   z-index: 0;
-  animation: roadmove  13s linear infinite ;
-  animation-delay: 1.76s
+  animation: citymove  33s linear infinite ;
+  animation-delay: 15s
 }
 .buildings03{
   position: absolute;
@@ -186,8 +174,8 @@
 }
 .tree01{
   bottom: 120px;
-  right: 1000px;
-  width: 80px;
+  right: 1200px;
+  width: 120px;
   height: 120px;
   margin: 0;
   padding: 0;
@@ -195,7 +183,7 @@
   z-index: 1;
   animation: roadmove  8s linear infinite ;
   animation-delay: 1.23s;
-  margin-left: -130px;
+  margin-left: 5px;
 
 
 }
@@ -214,38 +202,7 @@
   margin-left: -100px;
 
 }
-.tree02{
-  bottom: 120px;
-  right: 1000px;
-  width: 80px;
-  height: 120px;
-  margin: 0;
-  padding: 0;
-  transform:scaleX(-1);
-  z-index: 1;
 
-  animation: roadmove  6s linear infinite ;
-
-}
-.cao01{
-  position: relative;
-  bottom: 120px;
-  width: 20px;
-  height: 30px;
-  right: 400px;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  animation: roadmove  20s linear infinite ;
-  /*animation-delay: 2.23s*/
-
-
-}
-.road-object{
-  position: absolute;
-  width: 100%;
-  top: 50%;
-}
 
 
 @keyframes shake {
@@ -271,6 +228,19 @@
   }
   100% {
     transform: translate(-500px, 0px);/*结束位置*/
+  }
+
+}
+@keyframes citymove {
+  0% {
+    transform: translate(400%, 0px);/*开始位置*/
+  }
+  50% {
+    transform: translate(175%, 0px); /* 可配置跳动方向 */
+
+  }
+  100% {
+    transform: translate(-50%, 0px);/*结束位置*/
   }
 
 }

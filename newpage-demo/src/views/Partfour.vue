@@ -3,7 +3,7 @@
     <div class="container">
       <div class="page" style="color: black; text-align: center" id="page1">
         <button class="button-right" @click="gotopage('page2')"></button>
-        <Parttwo_01></Parttwo_01>
+        <Partfour_01></Partfour_01>
       </div>
       <div class="page" style="color: black; text-align: center" id="page2" >
         <button class="button-left" @click="gotopage('page1')"></button>
@@ -24,13 +24,16 @@
         <button class="button-right" @click="gotopage('page1')"></button>
       </div>
     </div>
+    <CarRunning></CarRunning>
   </div>
 
 </template>
 
 <script setup>
-import Parttwo_01 from "@/views/PartTwopage/Parttwo_01.vue";
-import Parttwo_02 from "@/views/PartTwopage/Parttwo_02.vue";
+import Partfour_01 from "@/views/PartFourpage/Partfour_01.vue";
+import Parttwo_02 from "@/views/PartTwopage/Parttwo_03.vue";
+
+import CarRunning from "@/views/elements/CarRunning.vue";
 
 
 function gotopage(pageid) {

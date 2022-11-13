@@ -1,8 +1,13 @@
 <template>
   <div class="Partonepage">
     <div class="container">
+      <div class="page" style="color: black; text-align: center" id="page0">
+<!--        <button class="button-left" @click="gotopage('page5')"></button>-->
+        <button class="button-go" @click="gotopage('page1')"></button>
+        <Partone_0></Partone_0>
+      </div>
       <div class="page" style="color: black; text-align: center" id="page1">
-        <button class="button-left" @click="gotopage('page5')"></button>
+<!--        <button class="button-left" @click="gotopage('page5')"></button>-->
         <button class="button-right" @click="gotopage('page2')"></button>
         <Partone_01></Partone_01>
       </div>
@@ -22,19 +27,25 @@
         <button class="button-right" @click="gotopage('page5')"></button>
         <Partone_04></Partone_04>
       </div>
-      <div class="page" style="color: black; text-align: center" id="page5" >Page5
+      <div class="page" style="color: black; text-align: center" id="page5" >
         <button class="button-left" @click="gotopage('page4')"></button>
-        <button class="button-right" @click="gotoIndexpage()"></button>
+        <button class="button-right" @click="gotopage('page6')"></button>
+        <Partone_05></Partone_05>
       </div>
-<!--      <div class="page" style="color: black; text-align: center" id="page6" >Page6-->
-<!--        <button class="button-left" @click="gotopage('page5')"></button>-->
-<!--        <button class="button-right" @click="gotopage('page7')"></button>-->
+      <div class="page" style="color: black; text-align: center" id="page6" >
+        <button class="button-left" @click="gotopage('page5')"></button>
+        <button class="button-right" @click="gotoIndexpage()"></button>
 <!--        <Partone_06></Partone_06>-->
-<!--      </div>-->
+      </div>
 <!--      <div class="page" style="color: black; text-align: center" id="page7">-->
 <!--        <button class="button-left" @click="gotopage('page6')"></button>-->
+<!--        <button class="button-right" @click="gotoIndexpage()"></button>-->
 <!--        <Partone_07></Partone_07>-->
+
 <!--      </div>-->
+    </div>
+    <div class="car">
+      <CarRunning></CarRunning>
     </div>
   </div>
   
@@ -44,12 +55,16 @@
 import {ref, nextTick, defineEmits} from "vue";
 // import Partone_01 from "@/views/Partone_01.vue";
 // import Partone_02 from "@/views/Partone_02.vue";
+import Partone_0 from "@/views/PartOnepage/Partone_0.vue";
+
 import Partone_01 from "@/views/PartOnepage/Partone_01.vue";
 import Partone_02 from "@/views/PartOnepage/Partone_02.vue";
 import Partone_03 from "@/views/PartOnepage/Partone_03.vue";
-import Partone_06 from "@/views/PartOnepage/Partone_06.vue";
 import Partone_04 from "@/views/PartOnepage/Partone_04.vue";
+import Partone_05 from "@/views/PartOnepage/Partone_05.vue";
+// import Partone_07 from "@/views/PartOnepage/Partone_07.vue";
 import CarRunning from "@/views/elements/CarRunning.vue";
+
 import router from "@/router";
 
 
@@ -65,7 +80,7 @@ function gotoIndexpage (){
 </script>
 
 <style>
-CarRunning{
+.car{
   position: absolute;
   z-index: 100;
 }
@@ -77,8 +92,16 @@ CarRunning{
   background-image: url("../assets/images/background/PartOnebg.png");
   background-position: center ;
   background-repeat: no-repeat;
+  background-size: cover;
   position: fixed;
+  overflow: hidden;
   top: 0;
+}
+.bgcity{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1002;
 }
 Partone_01{
   width: 100%;
@@ -95,32 +118,70 @@ Partone_01{
   width: 100vw;
   height: 101vh;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .page:nth-child(1) {
-  /*background: hsl(140deg, 50%, 100%);*/
+  background: url("../assets/images/background/bgcolor.png");
+  z-index: 101;
 }
-
 .page:nth-child(2) {
-  /*background: hsl(210deg, 50%, 50%);*/
+  /*background: hsl(140deg, 50%, 100%);*/
+  z-index: 99;
 }
 
 .page:nth-child(3) {
-  /*background: hsl(270deg, 50%, 50%);*/
-}
-.page:nth-child(4) {
-  /*background: hsl(140deg, 50%, 50%);*/
+  /*background: hsl(210deg, 50%, 50%);*/
+  z-index: 99;
+
 }
 
+.page:nth-child(4) {
+  /*background: hsl(270deg, 50%, 50%);*/
+  z-index: 99;
+
+}
 .page:nth-child(5) {
-  /*background: hsl(210deg, 50%, 50%);*/
+  /*background: hsl(140deg, 50%, 50%);*/
+  z-index: 99;
+
 }
 
 .page:nth-child(6) {
-  /*background: hsl(270deg, 50%, 50%);*/
+  background: url("../assets/images/background/bgcolor.png");
+  z-index: 99;
+
+}
+
+.page:nth-child(7) {
+  background: url("../assets/images/background/bgcolor.png");
 }
 .page:nth-child(7) {
   /*background: hsl(140deg, 50%, 50%);*/
+}
+
+.button-go{
+  border: 0;
+  width: 400px;
+  height: 430px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -100px;
+  bottom: 0;
+  margin: auto;
+  background:url("../src/assets/images/PartOne/POpage0_img.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter:brightness(70%);
+  z-index: 1002;
+  cursor: pointer;
+  transition: 1s;
+}
+.button-go:hover{
+  filter:brightness(120%);
+
 }
 .button-left{
   border: 0;
@@ -133,7 +194,7 @@ Partone_01{
   background-size:cover;
   background-repeat: no-repeat;
   /*filter:contrast(10%);*/
-  z-index: 999;
+  z-index: 1002;
   cursor: pointer;
 }
 .button-right{
@@ -147,7 +208,7 @@ Partone_01{
   background-size:cover;
   background-repeat: no-repeat;
   /*filter:contrast(0%);*/
-  z-index: 1000;
+  z-index: 1002;
   cursor: pointer;
 }
 

@@ -3,34 +3,41 @@
     <div class="container">
       <div class="page" style="color: black; text-align: center" id="page1">
         <button class="button-right" @click="gotopage('page2')"></button>
-        <Parttwo_01></Parttwo_01>
+        <Partthree_01></Partthree_01>
       </div>
       <div class="page" style="color: black; text-align: center" id="page2" >
         <button class="button-left" @click="gotopage('page1')"></button>
         <button class="button-right" @click="gotopage('page3')"></button>
-        <Parttwo_02></Parttwo_02>
+        <Partthree_02></Partthree_02>
       </div>
-      <div class="page" style="color: black; text-align: center" id="page3">Page3
+      <div class="page" style="color: black; text-align: center" id="page3">
         <button class="button-left" @click="gotopage('page2')"></button>
         <button class="button-right" @click="gotopage('page4')"></button>
-
+        <Partthree_03></Partthree_03>
       </div>
-      <div class="page" style="color: black; text-align: center" id="page4" >Page4
+      <div class="page" style="color: black; text-align: center" id="page4" >
         <button class="button-left" @click="gotopage('page3')"></button>
         <button class="button-right" @click="gotopage('page5')"></button>
+        <Partthree_04></Partthree_04>
       </div>
-      <div class="page" style="color: black; text-align: center" id="page5" >Page5
+      <div class="page" style="color: black; text-align: center" id="page5" >
         <button class="button-left" @click="gotopage('page4')"></button>
         <button class="button-right" @click="gotopage('page1')"></button>
       </div>
     </div>
+    <CarRunning></CarRunning>
   </div>
 
 </template>
 
 <script setup>
-import Parttwo_01 from "@/views/PartTwopage/Parttwo_01.vue";
-import Parttwo_02 from "@/views/PartTwopage/Parttwo_02.vue";
+import Partthree_01 from "@/views/PartThreePage/Partthree_01.vue";
+import Partthree_02 from "@/views/PartThreePage/Partthree_02.vue";
+import Partthree_03 from "@/views/PartThreePage/Partthree_03.vue";
+import Partthree_04 from "@/views/PartThreePage/Partthree_04.vue";
+
+import Parttwo_02 from "@/views/PartTwopage/Parttwo_03.vue";
+import CarRunning from "@/views/elements/CarRunning.vue";
 
 
 function gotopage(pageid) {
@@ -68,12 +75,21 @@ function gotopage(pageid) {
 }
 
 .page:nth-child(1) {
+  background: url("../assets/images/background/bgcolor.png");
 }
 
 .page:nth-child(2) {
+  background: url("../assets/images/background/bgcolor.png");
+
 }
 
 .page:nth-child(3) {
+  background: url("../assets/images/background/bgcolor.png");
+
+}
+.page:nth-child(4) {
+  background: url("../assets/images/background/bgcolor.png");
+
 }
 .button-left{
   border: 0;
