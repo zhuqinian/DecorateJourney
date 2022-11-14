@@ -1,13 +1,8 @@
 <!--html-->
 <template>
-  <div class="Partthree_02">
-    <img class="co2" src="../../assets/images/PartThree/CO2.png">
-    <img class="ch4" src="../../assets/images/PartThree/CH4.png">
-    <img class="no2" src="../../assets/images/PartThree/NO2.png">
-
-    <div class="P3_01chart">
-      <iframe src='https://flo.uri.sh/visualisation/11781762/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-    </div>
+  <div class="Partfourpage_02">
+    <div class="P4_02chart">
+      <iframe src='https://flo.uri.sh/visualisation/11798488/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>    </div>
   </div>
 </template>
 
@@ -18,36 +13,20 @@
 
 <!--css-->
 <style>
-.Partthree_02 {
+.Partfourpage_02 {
   width: 100%;
   height: 100%;
 }
-.P3_01chart{
+.P4_02chart{
   width: 800px;
   height: 600px;
   transform: scale(1.4,1.4);
-  top: 130px;
+  top: 230px;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  z-index: 2;
+  z-index: 1003;
 }
-.Partthree_02 img{
-  position: absolute;
-  z-index: 3;
-}
-.co2{
-  width: 350px;
-  left: 200px;
-  top: 220px;
-}
-.ch4{
-  left: 300px;
-  top: 560px;
-}
-.no2{
-  right: 200px;
-  top: 360px;
-}
+
 </style>

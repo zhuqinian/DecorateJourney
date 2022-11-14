@@ -1,7 +1,7 @@
 <!--html-->
 <template>
   <div class="Partthree_04">
-    <img class="title_img_P3" src="../../assets/images/PartThree/story_img.png">
+    <img class="title_img_P3" src="../../assets/images/PartThree/P3_story_img.png">
   </div>
 </template>
 

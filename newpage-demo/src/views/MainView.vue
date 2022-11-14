@@ -58,7 +58,7 @@ function gotoIndexpage (){
   bottom: 0;
   margin: auto;
   top: 530px;
-  background:url("../src/assets/images/newAssets/godown.png");
+  background:url("@/assets/images/newAssets/godown.png");
   background-size:cover;
   background-repeat: no-repeat;
   /*filter:contrast(0%);*/

@@ -2,7 +2,7 @@
 const getAssetsFile = function (url){
     // console.log('url===============', url);
     // 获取文件夹下所有图片名称
-    let files = import.meta.globEager('../assets/images/character/*.png');
+    let files = import.meta.globEager('../assets/images/newAssets/*.png');
     let AllPics = Object.values(files).map((v) => v.default);
     // console.log('AllPics===============', AllPics);
     let isExist = 0;
@@ -23,6 +23,6 @@ const getAssetsFile = function (url){
         imgSrc = 'test.png';
     }
     // console.log('imgSrc===============', imgSrc);
-    return new URL(`./images/character/${imgSrc}`, import.meta.url).href;
+    return new URL(`./images/newAssets/${imgSrc}`, import.meta.url).href;
 };
 export default getAssetsFile

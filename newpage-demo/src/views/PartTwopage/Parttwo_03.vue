@@ -49,15 +49,17 @@
   position: absolute;
   width: 500px;
   height: 200px;
+  top: 50px;
   left: 20%;
+  z-index: 4;
 }
 .chart_203{
   width: 970px;
   height: 575px;
-  top: 180px;
+  top: 100px;
   left: 135px;
   /*border: 3px solid #262626;*/
-  border-radius: 30px;
+  /*border-radius: 30px;*/
   z-index: 3;
   background: #F8F8FF;
   overflow: hidden;

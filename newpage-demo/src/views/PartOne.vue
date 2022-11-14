@@ -3,7 +3,7 @@
     <div class="container">
       <div class="page" style="color: black; text-align: center" id="page0">
 <!--        <button class="button-left" @click="gotopage('page5')"></button>-->
-        <button class="button-go" @click="gotopage('page1')"></button>
+        <button class="button-go01" @click="gotopage('page1')"></button>
         <Partone_0></Partone_0>
       </div>
       <div class="page" style="color: black; text-align: center" id="page1">
@@ -14,7 +14,7 @@
       <div class="page" style="color: black; text-align: center" id="page2" >
         <button class="button-left" @click="gotopage('page1')"></button>
         <button class="button-right" @click="gotopage('page3')"></button>
-        <Partone_02></Partone_02>
+        <Partone_02 ></Partone_02>
 <!--        <iframe src="https://dycharts.com/xshow/index.html?id=c_a7f928624bdd1ebb9b84a5baacf3ecab" width="600" height="510" scrolling="no" frameborder="0" align=""></iframe>-->
       </div>
       <div class="page" style="color: black; text-align: center" id="page3" >
@@ -29,7 +29,7 @@
       </div>
       <div class="page" style="color: black; text-align: center" id="page5" >
         <button class="button-left" @click="gotopage('page4')"></button>
-        <button class="button-right" @click="gotoIndexpage('/','JumpSection')"></button>
+<!--        <button class="button-right" @click="gotoIndexpage('/','JumpSection')"></button>-->
         <Partone_05></Partone_05>
       </div>
 <!--      <div class="page" style="color: black; text-align: center" id="page6" >-->
@@ -44,9 +44,7 @@
 
 <!--      </div>-->
     </div>
-    <div class="car">
       <CarRunning></CarRunning>
-    </div>
   </div>
   
 </template>
@@ -62,8 +60,9 @@ import Partone_02 from "@/views/PartOnepage/Partone_02.vue";
 import Partone_03 from "@/views/PartOnepage/Partone_03.vue";
 import Partone_04 from "@/views/PartOnepage/Partone_04.vue";
 import Partone_05 from "@/views/PartOnepage/Partone_05.vue";
-// import Partone_07 from "@/views/PartOnepage/Partone_07.vue";
 import CarRunning from "@/views/elements/CarRunning.vue";
+
+// import usePub_assets from "../../src/assets/pubUse_newassets.js";
 
 import router from "@/router";
 
@@ -79,7 +78,7 @@ function gotoIndexpage (path,id){
   router.push(path);
 }
 
-  
+
 </script>
 
 <style>
@@ -100,17 +99,8 @@ function gotoIndexpage (path,id){
   overflow: hidden;
   top: 0;
 }
-.bgcity{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1002;
-}
-Partone_01{
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
+
+
 .container {
   display: flex;
   overflow-x: scroll;
@@ -129,8 +119,8 @@ Partone_01{
   z-index: 101;
 }
 .page:nth-child(2) {
-  /*background: hsl(140deg, 50%, 100%);*/
-  /*z-index: 100;*/
+  background: url("../assets/images/background/bgcolor.png");
+  z-index: 101;
 }
 
 .page:nth-child(3) {
@@ -152,7 +142,7 @@ Partone_01{
 
 .page:nth-child(6) {
   background: url("../assets/images/background/bgcolor.png");
-  /*z-index: 99;*/
+  z-index: 101;
 
 }
 
@@ -163,7 +153,7 @@ Partone_01{
 /*  !*background: hsl(140deg, 50%, 50%);*!*/
 /*}*/
 
-.button-go{
+.button-go01{
   border: 0;
   width: 400px;
   height: 430px;
@@ -173,7 +163,7 @@ Partone_01{
   top: -100px;
   bottom: 0;
   margin: auto;
-  background:url("../src/assets/images/PartOne/POpage0_img.png");
+  background:url("@/assets/images/PartOne/P1page0_img.png");
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -182,7 +172,7 @@ Partone_01{
   cursor: pointer;
   transition: 1s;
 }
-.button-go:hover{
+.button-go01:hover{
   filter:brightness(120%);
 
 }
@@ -193,7 +183,7 @@ Partone_01{
   position: absolute;
   left: -3%;
   top: 25%;
-  background:url("../src/assets/images/newAssets/goleft_new.png");
+  background:url("@/assets/images/newAssets/goleft_new.png");
   background-size:cover;
   background-repeat: no-repeat;
   /*filter:contrast(10%);*/
@@ -207,7 +197,7 @@ Partone_01{
   position: absolute;
   right: 0;
   top: 25%;
-  background:url("../src/assets/images/newAssets/goright_new.png");
+  background:url("@/assets/images/newAssets/goright_new.png");
   background-size:cover;
   background-repeat: no-repeat;
   /*filter:contrast(0%);*/
